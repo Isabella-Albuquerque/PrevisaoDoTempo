@@ -26,6 +26,7 @@ app.get('/api/previsao', async (req, res) => {
     });
 
       const previsoes = data.list.map(previsao => ({
+      dt: previsao.dt_txt,
       temp_min: previsao.main.temp_min,
       temp_max: previsao.main.temp_max,
       umidade: previsao.main.humidity,
